@@ -77,14 +77,36 @@ function App() {
       </header>
 
       {/* ¿Qué es Camionar? Section */}
-      <section id="que-es" className="py-16 px-4 sm:py-20">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">¿Qué es Camionar?</h2>
-        <p className="text-base sm:text-lg text-gray-600 mb-12 max-w-3xl mx-auto text-center leading-relaxed">
-          Camionar es un marketplace especializado en compra y venta de transporte de carga. Conectamos
-          compradores y vendedores sin intermediarios.
-        </p>
+      <section className="max-w-6xl mx-auto py-16 px-4">
+      <div className="flex flex-col items-center gap-12">
+        {/* Tarjeta 1 */}
+        <div className="w-full max-w-3xl bg-white/20 backdrop-blur-md rounded-2xl shadow-lg p-8 transition-all hover:shadow-xl flex flex-col sm:flex-row sm:items-start sm:gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 sm:w-1/3 text-center sm:text-left">
+            ¿Qué es Camionar?
+          </h2>
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed sm:w-2/3 text-center sm:text-left">
+            Camionar es mucho más que una plataforma de compra y venta de camiones:
+            es un ecosistema transparente, colaborativo y sin comisiones, diseñado
+            para conectar de forma directa a vendedores y compradores en toda la
+            Argentina.
+          </p>
+        </div>
 
+        {/* Tarjeta 2 */}
+        <div className="w-full max-w-3xl bg-white/20 backdrop-blur-md rounded-2xl shadow-lg p-8 transition-all hover:shadow-xl flex flex-col sm:flex-row sm:items-start sm:gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 sm:w-1/3 text-center sm:text-left">
+            Nuestro objetivo es
+          </h2>
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed sm:w-2/3 text-center sm:text-left">
+            Con una interfaz sencilla, herramientas inteligentes y un firme
+            compromiso con la profesionalización del sector, trabajamos para
+            generar confianza, eficiencia y oportunidades reales para todos.
+          </p>
+        </div>
+
+      
+    
+   
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {[
             {
