@@ -42,6 +42,10 @@ function App() {
           )}
         </div>
       </nav>
+
+
+
+
       <div className="relative w-full overflow-hidden bg-[#002B5B] text-white">
       {/* Truck image with clip-path for inclination only at the beginning */}
       <div className="absolute bottom-0 right-0 top-0 w-1/2">
@@ -63,18 +67,19 @@ function App() {
         <div className="absolute bottom-0 left-0 top-0 w-1/4 bg-gradient-to-r from-[#002B5B] to-transparent"></div>
       </div>
 
-      {/* Content positioned with higher z-index to be above the image */}
-      <div className="container relative z-20 mx-auto grid min-h-[400px] grid-cols-1 items-center px-4 py-10 md:grid-cols-2 lg:min-h-[500px]">
-        {/* Left content */}
-        <div className="flex flex-col space-y-6 pb-10 md:pb-0">
+      {/* Content container with max-width to keep content in left half */}
+      <div className="relative z-20 mx-auto min-h-[400px] px-4 py-10 lg:min-h-[500px]">
+        {/* Left content constrained to left 50% */}
+        <div className="flex h-full w-full max-w-[45%] flex-col justify-center space-y-6 pr-4 sm:pr-6 md:pr-8">
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
             Donde los camiones encuentran dueño
           </h1>
           <p className="text-lg text-gray-300 md:text-xl">
             Una plataforma exclusiva para la compra y venta de camiones.
           </p>
-          <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
-          <button
+          <div className="w-[30vw] max-w-full">
+            <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-3 sm:space-y-0">
+            <button
               className="bg-white text-[#002B5B] px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300"
             >
               Quiero vender mi camión
@@ -84,10 +89,13 @@ function App() {
             >
               Busco un camión
             </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+      
 
      
       {/* ¿Qué es Camionar? Section */}
