@@ -109,7 +109,7 @@ function App() {
         {/* Tarjeta 2 */}
         <div className="w-full max-w-3xl bg-white/20 backdrop-blur-md rounded-2xl shadow-lg p-8 transition-all hover:shadow-xl flex flex-col sm:flex-row sm:items-start sm:gap-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 sm:w-1/3 text-center sm:text-left">
-            Nuestro objetivo es
+            Nuestro objetivo
           </h2>
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed sm:w-2/3 text-center sm:text-left">
             Con una interfaz sencilla, herramientas inteligentes y un firme
