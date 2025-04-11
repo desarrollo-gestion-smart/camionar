@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Camionar Landing Page",
+  title: "Camionar",
   description: "Donde los camiones encuentran dueño",
 };
 
