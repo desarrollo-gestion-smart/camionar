@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Menu, X, ChevronRight, Eye, Target, Handshake,Truck, Car, Star } from 'lucide-react';
+import Image from 'next/image';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,41 +42,54 @@ function App() {
           )}
         </div>
       </nav>
+      <div className="relative w-full overflow-hidden bg-[#002B5B] text-white">
+      {/* Truck image with clip-path for inclination only at the beginning */}
+      <div className="absolute bottom-0 right-0 top-0 w-1/2">
+        <div
+          className="absolute bottom-0 right-0 top-0 w-full overflow-hidden"
+          style={{
+            clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)",
+          }}
+        >
+           <Image
+            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80"
+            alt="Camión"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+        {/* Overlay to blend with background */}
+        <div className="absolute bottom-0 left-0 top-0 w-1/4 bg-gradient-to-r from-[#002B5B] to-transparent"></div>
+      </div>
 
-      {/* Hero Section */}
-      <header className="pt-16 bg-[#002B5B] text-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center py-20">
-            <div className="transform transition-all duration-500">
-              <h1 className="text-5xl font-bold mb-4 leading-tight">
-                Donde los camiones encuentran dueño
-              </h1>
-              <p className="text-xl mb-8">
-                Una plataforma exclusiva para la compra y venta de camiones.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <button className="bg-white text-[#002B5B] px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
-                  Quiero vender mi camión
-                </button>
-                <button className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition duration-300">
-                  Busco un camión
-                </button>
-              </div>
-            </div>
-            <div className="relative transform transition-all duration-500">
-              <img
-                src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80"
-                alt="Camión moderno"
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
-            </div>
+      {/* Content positioned with higher z-index to be above the image */}
+      <div className="container relative z-20 mx-auto grid min-h-[400px] grid-cols-1 items-center px-4 py-10 md:grid-cols-2 lg:min-h-[500px]">
+        {/* Left content */}
+        <div className="flex flex-col space-y-6 pb-10 md:pb-0">
+          <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+            Donde los camiones encuentran dueño
+          </h1>
+          <p className="text-lg text-gray-300 md:text-xl">
+            Una plataforma exclusiva para la compra y venta de camiones.
+          </p>
+          <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
+          <button
+              className="bg-white text-[#002B5B] px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300"
+            >
+              Quiero vender mi camión
+            </button>
+            <button
+              className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition duration-300"
+            >
+              Busco un camión
+            </button>
           </div>
         </div>
-        <div className="relative h-20 overflow-hidden">
-          <div className="absolute bottom-0 w-full h-full bg-white transform -skew-y-3 origin-bottom-right"></div>
-        </div>
-      </header>
+      </div>
+    </div>
 
+     
       {/* ¿Qué es Camionar? Section */}
       <section className="max-w-6xl mx-auto py-16 px-4">
       <div className="flex flex-col items-center gap-12">
