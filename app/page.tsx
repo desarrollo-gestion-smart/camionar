@@ -46,7 +46,7 @@ function App() {
 
       
       <div className="relative w-full overflow-hidden bg-[#002B5B] text-white">
-  {/* Truck image with clip-path - only shown on medium and up */}
+  {/* Imagen en desktop con clip-path y gradiente */}
   <div className="absolute bottom-0 right-0 top-0 hidden w-1/2 md:block">
     <div
       className="absolute bottom-0 right-0 top-0 w-full overflow-hidden"
@@ -61,11 +61,14 @@ function App() {
         className="object-cover object-center"
         priority
       />
+      {/* Gradiente encima en desktop */}
+      <div className="absolute inset-0 bg-gradient-to-l from-[#002B5B] to-transparent"></div>
     </div>
+    {/* Superposición adicional para transición desde el fondo */}
     <div className="absolute bottom-0 left-0 top-0 w-1/4 bg-gradient-to-r from-[#002B5B] to-transparent"></div>
   </div>
 
-  {/* Show full-width image in mobile */}
+  {/* Imagen en mobile */}
   <div className="relative h-64 w-full md:hidden">
     <Image
       src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80"
@@ -74,12 +77,12 @@ function App() {
       className="object-cover object-center"
       priority
     />
-    <div className="absolute inset-0 bg-gradient-to-t from-[#002B5B] to-transparent"></div>
+    {/* Gradiente encima en mobile */}
+    <div className="absolute inset-0 bg-gradient-to-r from-[#002B5B] to-transparent"></div>
   </div>
 
-  {/* Content positioned with higher z-index to be above the image */}
+  {/* Contenido principal */}
   <div className="container relative z-20 mx-auto grid min-h-[400px] grid-cols-1 items-center px-4 py-10 md:grid-cols-2 lg:min-h-[500px]">
-    {/* Left content */}
     <div className="flex flex-col space-y-6 pb-10 md:pb-0">
       <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
         Donde los camiones encuentran dueño
