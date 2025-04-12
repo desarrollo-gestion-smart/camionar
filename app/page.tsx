@@ -6,7 +6,8 @@ import About from './components/landing/about';
 import Benefits from './components/landing/benefits';
 import VisionMission from './components/landing/visionMission';
 import Footer from './components/landing/footer';
-
+import Form from './components/landing/form';
+import WhatsAppButton from "./components/landing//messageButton"
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,6 +18,8 @@ function App() {
       <About />
       <Benefits />
       <VisionMission />
+      <Form />
+      <WhatsAppButton phoneNumber="123456789" message="Hola, necesito información sobre sus servicios." />
       <Footer />
     </div>
   );
